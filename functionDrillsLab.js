@@ -173,19 +173,19 @@ console.log('declaration')
 
 //CODE HERE
 
-function nameCheck(name){
-  if(nameCheck === 'Steven'){
-    return 'What is up Steven'
-  }else if(nameCheck === 'Bryan'){
-    return 'Hey Bryan!'
-  }else {
-    return `Cool name, ${name}`
-  }
-}
+// function nameCheck(name){
+//   if(nameCheck === 'Steven'){
+//     return 'What is up Steven'
+//   }else if(nameCheck === 'Bryan'){
+//     return 'Hey Bryan!'
+//   }else {
+//     return `Cool name, ${name}`
+//   }
+// }
 
-let nameGreeting = nameCheck('Steven')
+// let nameGreeting = nameCheck('Steven')
 
-console.log(nameGreeting)
+// console.log(nameGreeting)
 
 ////////////////// PROBLEM 11 ////////////////////
 /*
@@ -228,7 +228,8 @@ for(let i = 0;i < namesArr.lenght; i++){
   console.log(names[i])
 }
 }
-// printAllNames(namesArr)
+printAllNames(namesArr)
+
 ////////////////// PROBLEM 13 ////////////////////
 /*
   Create a function called thatsOdd that takes in a single argument (a number).
@@ -239,7 +240,16 @@ for(let i = 0;i < namesArr.lenght; i++){
 
 //CODE HERE
 
+function thatsOdd(num){
+  if(num % 2 === 0){
+    return "That's not odd!"
+  }else {
+    return "That is odd indeed!"
+  }
+}
 
+let oddChecker = thatsOdd(4)
+ console.log(oddChecker)
 ////////////////// PROBLEM 14 ////////////////////
 
 /*
@@ -252,6 +262,8 @@ for(let i = 0;i < namesArr.lenght; i++){
 
 //CODE HERE
 
+const bestMovie = title => `${title} is the best movie ever!`
+console.log(bestMovie('Snatch'))
 
 ////////////////// PROBLEM 15 ////////////////////
 let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
@@ -266,7 +278,20 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 
 //CODE HERE
 
-
+function bigOrSmall(arr){
+  let answers = []
+  for( i = 0; i < arr.length; i++){
+    if(arr[i] > 100){
+      answers.push('big')
+    }else {
+      answers.push('small')
+    }
+     console.log(answers)
+     
+  } return answers
+}
+ let arrayEvaluator = bigOrSmall(bigOrSmallArray)
+console.log(arrayEvaluator)
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
 let loser = 'Glimmer'
@@ -276,6 +301,15 @@ let loser = 'Glimmer'
 */
 
 //CODE HERE
+
+function theEliminator(contestant, loser){
+  for(i = 0; i < contestant.length; i++){
+    if(contestant[i] === loser){
+      contestant.splice(i, 1)
+    }
+  }return contestant
+}
+
 
 
 ////////////////// PROBLEM 17 ////////////////////
@@ -287,7 +321,10 @@ let sampleString = "Hi, my name is Kylo."
 
 //CODE HERE
 
-
+function allCaps(str) {
+  console.log(str.toUpperCase())
+}
+allCaps(sampleString)
 ////////////////// PROBLEM 18 ////////////////////
 /*
   Write a function called emailCheck that takes in
@@ -299,6 +336,18 @@ let sampleString = "Hi, my name is Kylo."
   return 'must provide a valid email address'
 */
 
+function emailCheck(email){
+  email = string(email).trim()
+  if(email.includes('@')){
+    return 'email verified'
+
+  }else {
+    return 'must provide a valid email address'
+  }
+console.log(email('tchantha01@gmail.com'))
+  
+}
+
 ////////////////// PROBLEM 19 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
@@ -307,7 +356,10 @@ let sampleString = "Hi, my name is Kylo."
 
 //CODE HERE
 
-
+function chocolateFrogCost(gold){
+  return gold % 3
+}
+let totalFrogs = chocolateFrogCost(30)
 ////////////////// PROBLEM 20 ////////////////////
 /*
   You might have noticed a slight bug in the previous problem. If you were to pass in 4 gold, the function would return to you 1.3333... However, you can't really go to a store and by 1.333 products. You would just be able to purchase 1 product. Re-write the function you used in the previous problem (give it the same name, just add a 2 to the end of it) that fixes this bug. Invoke the function and store the returned value to a variable called `totalFrogs2`.
@@ -315,6 +367,7 @@ let sampleString = "Hi, my name is Kylo."
 
 //CODE HERE
 
+???
 
 ////////////////// PROBLEM 21 ////////////////////
 let sampleArray = [0,1,2,3,4,7,5,6,8,9]
@@ -323,6 +376,15 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 */
 
 //CODE HERE
+function arrNum(nums){
+  for(let i = 0; i < nums.length; i++){
+    if(nums[i + 1] < nums[i]){
+      return false
+    } 
+  }return true
+ }
+let arrayIsAscending = arrNum(sampleArray)
+console.log(arrayIsAscending)
 
 
 ////////////////// PROBLEM 22 ////////////////////
