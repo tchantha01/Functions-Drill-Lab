@@ -321,10 +321,10 @@ let sampleString = "Hi, my name is Kylo."
 
 //CODE HERE
 
-function allCaps(str) {
-  console.log(str.toUpperCase())
-}
-allCaps(sampleString)
+// function allCaps(str) {
+//   console.log(str.toUpperCase())
+// }
+// allCaps(sampleString)
 ////////////////// PROBLEM 18 ////////////////////
 /*
   Write a function called emailCheck that takes in
@@ -337,16 +337,19 @@ allCaps(sampleString)
 */
 
 function emailCheck(email){
-  email = string(email).trim()
+  // email = string(email).trim()
+  let trimmedEmail = email.trim()
+  console.log(trimmedEmail)
   if(email.includes('@')){
-    return 'email verified'
+    return console.log("emailed verified.")
 
   }else {
-    return 'must provide a valid email address'
+    return console.log("must provide a valid email address.")
   }
-console.log(email('tchantha01@gmail.com'))
-  
+
 }
+
+emailCheck("       tchantha01@gmail.com        ")
 
 ////////////////// PROBLEM 19 ////////////////////
 /*
@@ -356,10 +359,10 @@ console.log(email('tchantha01@gmail.com'))
 
 //CODE HERE
 
-function chocolateFrogCost(gold){
-  return gold % 3
-}
-let totalFrogs = chocolateFrogCost(30)
+// function chocolateFrogCost(gold){
+//   return gold % 3
+// }
+// let totalFrogs = chocolateFrogCost(30)
 ////////////////// PROBLEM 20 ////////////////////
 /*
   You might have noticed a slight bug in the previous problem. If you were to pass in 4 gold, the function would return to you 1.3333... However, you can't really go to a store and by 1.333 products. You would just be able to purchase 1 product. Re-write the function you used in the previous problem (give it the same name, just add a 2 to the end of it) that fixes this bug. Invoke the function and store the returned value to a variable called `totalFrogs2`.
@@ -367,7 +370,7 @@ let totalFrogs = chocolateFrogCost(30)
 
 //CODE HERE
 
-???
+
 
 ////////////////// PROBLEM 21 ////////////////////
 let sampleArray = [0,1,2,3,4,7,5,6,8,9]
@@ -376,15 +379,15 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 */
 
 //CODE HERE
-function arrNum(nums){
-  for(let i = 0; i < nums.length; i++){
-    if(nums[i + 1] < nums[i]){
-      return false
-    } 
-  }return true
- }
-let arrayIsAscending = arrNum(sampleArray)
-console.log(arrayIsAscending)
+// function arrNum(nums){
+//   for(let i = 0; i < nums.length; i++){
+//     if(nums[i + 1] < nums[i]){
+//       return false
+//     } 
+//   }return true
+//  }
+// let arrayIsAscending = arrNum(sampleArray)
+// console.log(arrayIsAscending)
 
 
 ////////////////// PROBLEM 22 ////////////////////
@@ -409,10 +412,10 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ['duck']
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ['rubberDuck', 'sailorDuck']
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
 let bathtubScope = []
